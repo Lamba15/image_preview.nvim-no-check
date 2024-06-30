@@ -9,13 +9,7 @@ local function GetFileExtension(url)
 end
 
 local function GetTerm()
-    if os.getenv('KITTY_PID') ~= nil then
-        return 'kitty'
-    elseif os.getenv('WEZTERM_PANE') ~= nil then
-        return 'wezterm'
-    else
-        return nil
-    end
+    return 'kitty'
 end
 
 function M.IsImage(url)
